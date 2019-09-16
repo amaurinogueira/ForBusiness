@@ -1,0 +1,32 @@
+<%= form_with(model: fato, local: true) do |form| %>
+  <% if fato.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fato.errors.count, "error") %> prohibited this fato from being saved:</h2>
+
+      <ul>
+      <% fato.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :statusFato %>
+    <%= form.text_field :statusFato %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dataFinalizacao %>
+    <%= form.date_select :dataFinalizacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :logColaborador %>
+    <%= form.text_field :logColaborador %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

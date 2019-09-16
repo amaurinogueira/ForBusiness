@@ -1,0 +1,37 @@
+<%= form_with(model: colaborador, local: true) do |form| %>
+  <% if colaborador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(colaborador.errors.count, "error") %> prohibited this colaborador from being saved:</h2>
+
+      <ul>
+      <% colaborador.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nomeColaborador %>
+    <%= form.text_field :nomeColaborador %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpfColaborador %>
+    <%= form.number_field :cpfColaborador %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ctpsColaborador %>
+    <%= form.number_field :ctpsColaborador %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipoColaborador %>
+    <%= form.text_field :tipoColaborador %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

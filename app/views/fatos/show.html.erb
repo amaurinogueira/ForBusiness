@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Statusfato:</strong>
+  <%= @fato.statusFato %>
+</p>
+
+<p>
+  <strong>Datafinalizacao:</strong>
+  <%= @fato.dataFinalizacao %>
+</p>
+
+<p>
+  <strong>Logcolaborador:</strong>
+  <%= @fato.logColaborador %>
+</p>
+
+<%= link_to 'Edit', edit_fato_path(@fato) %> |
+<%= link_to 'Back', fatos_path %>

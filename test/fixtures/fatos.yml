@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  statusFato: MyString
+  dataFinalizacao: 2019-09-16
+  logColaborador: MyString
+
+two:
+  statusFato: MyString
+  dataFinalizacao: 2019-09-16
+  logColaborador: MyString
