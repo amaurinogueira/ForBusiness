@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Datavencimento:</strong>
+  <%= @vencimento_tarefa.dataVencimento %>
+</p>
+
+<%= link_to 'Edit', edit_vencimento_tarefa_path(@vencimento_tarefa) %> |
+<%= link_to 'Back', vencimento_tarefas_path %>

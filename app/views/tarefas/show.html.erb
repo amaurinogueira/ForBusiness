@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Desctarefa:</strong>
+  <%= @tarefa.descTarefa %>
+</p>
+
+<p>
+  <strong>Diavencimento:</strong>
+  <%= @tarefa.diaVencimento %>
+</p>
+
+<%= link_to 'Edit', edit_tarefa_path(@tarefa) %> |
+<%= link_to 'Back', tarefas_path %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vencimento Tarefas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Datavencimento</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vencimento_tarefas.each do |vencimento_tarefa| %>
+      <tr>
+        <td><%= vencimento_tarefa.dataVencimento %></td>
+        <td><%= link_to 'Show', vencimento_tarefa %></td>
+        <td><%= link_to 'Edit', edit_vencimento_tarefa_path(vencimento_tarefa) %></td>
+        <td><%= link_to 'Destroy', vencimento_tarefa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vencimento Tarefa', new_vencimento_tarefa_path %>

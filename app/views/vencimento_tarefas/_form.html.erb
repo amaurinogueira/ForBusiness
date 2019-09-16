@@ -1,0 +1,22 @@
+<%= form_with(model: vencimento_tarefa, local: true) do |form| %>
+  <% if vencimento_tarefa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vencimento_tarefa.errors.count, "error") %> prohibited this vencimento_tarefa from being saved:</h2>
+
+      <ul>
+      <% vencimento_tarefa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dataVencimento %>
+    <%= form.date_select :dataVencimento %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
